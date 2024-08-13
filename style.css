@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    cursor: url('photos/cursor.png'),auto;
+    cursor: url('/photos/cursor.png'),auto;
 }
 .justify-align{
     display: flex;
