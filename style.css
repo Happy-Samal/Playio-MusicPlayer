@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    cursor: url('photos/cursor.png'),auto;
+}
+.justify-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.display{
+    display: none;
+}
+/* welcome section */
+.welcome{
+    background-color: #170e31;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    animation: anime 2s;
+} 
+@keyframes anime {
+   from{
+    background-color: #170e31;
+   }
+   to{
+    background-color: #0A0713;
+   }
+}
+.welcomeText{
+    position: absolute;
+    top: 25vh;
+    left:5vw;
+}
+.welcomeText> :nth-child(1){
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+.welcomeChild{
+    position: absolute;
+    width: 50px;
+    bottom:3vh;
+    left:6vw;
+}
+.welcomeImg1{
+    position: absolute;
+    bottom: 8vh;
+    left: 35vw;
+}
+.welcomeImg2{
+    position: absolute;
+    top: 7vh;
+    right: 27.5vw;
+}
+.welcomeImg3{
+    position: absolute;
+    bottom: 8vh;
+    right: 6.5vw;
+} 
+.img{
+    height: 550px;
+}
+/* logo section */
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo>img{
+    width: 70px;
+}
+.logo > :nth-child(2){
+    position: relative;
+    left: -12px;
+    font-size: 28px;
+    color: #7144FF;
+}
+
+/* home page section */
+.homepage{
+    background-color: #141021;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    position: relative;
+}
+.homepageDisplay{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.home-icon span lord-icon{
+    width: 38px;
+    height: 38px;
+}
+
+
+/* nav section  */
+.homepage nav {
+    width: 92vw;
+    justify-content: space-between;
+    background-color: #191330;
+    position: absolute;
+    top: 2vh;
+    border-radius: 10px;
+}
+.navChild{
+    gap: 23px;
+    position: relative;
+    right: 23px;
+}
+.select {
+    width: 110px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.select option {
+    color: white;
+    background-color: black;
+    border: none;
+}
+.update-username{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-btn {
+    background-color: #7144FF;
+    border-radius: 5px;
+    width: 68px;
+    height: 31px;
+    color: white;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+.signin-btn:hover{
+    background-color:#3e1db8 ;
+    font-size: 14px;
+}
+/* sign in section */
+.sign-in-information{
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+  top: 100px;
+}
+.emailGet{
+    height: 70vh;
+    width: 22vw;
+    background-color: white;
+    flex-direction: column;
+    position: relative;
+    gap: 40px;
+    color:#7B57E4;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 10;
+}
+.emailGet > :nth-child(2){
+    font-size: 24px;
+    font-weight: bold;
+}
+.cross{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.cross img{
+    cursor: pointer;
+}
+.username-input , .email-input , .password-input{
+    width: 80%;
+    height: 7%;
+    background-color: rgba(172, 172, 172, 0);
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    border-bottom: 2px solid black;
+    
+
+}
+.login-btn{
+    width: 70%;
+    height: 6%;
+    border: none;
+    border-radius: 10px;
+    background-color: #bdadff;
+    color:#141021;
+    font-weight: bold;
+    
+}
+.username-input , .email-input , .password-input::placeholder {
+    padding-left: 10px ;
+    color: black;
+}
+
+/* left playlist section */
+.playlist{
+    height: 81vh;
+    width: 25vw;
+    background-color: #191330;
+    margin-top: 100px;
+    padding: 10px 0px 0px 10px;
+}
+.playlist> :nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.playlist> :nth-child(1) div{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.playlist .mobile-cross-btn{
+    cursor: pointer;
+}
+.myInformation{
+    gap: 15px;
+    margin-top: 8px;
+    font-size: 12px;
+}
+.myInformation img{
+    width: 18px;
+}
+.myInformation a{
+    cursor: pointer;
+}
+.musicName{
+    height: 85%;
+    width: 95%;
+    margin-top: 10px;
+    padding: 10px 0px 0px 10px;
+    background-color:#170e31;
+    overflow-y: scroll;
+    scrollbar-color: #27175a #160e2d;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.songNameDiv{
+    min-height: 8%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 2px solid #332757 ;
+    padding-left: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.songNameDiv img{
+    width: 23px;
+    cursor: pointer;
+}
+.songNameDiv p{
+    cursor: pointer;
+}
+.songNameDiv:hover{
+    border: 2px solid #8167cf ;
+    cursor: pointer;
+}
+.songPara{
+    width:63%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* right music section */
+.musicSection{
+    height: 72vh;
+    width: 70vw;
+    background-color: #191330;
+    margin-top: 100px;
+    /* transition: all 1s; */
+}
+
+.backPlaylist-btn{
+    cursor: pointer;
+    margin: 5px 0 10px 10px;
+}
+.musicFolders{
+    height: 83%;
+    max-height: 84%;
+    width: 96%;
+    background-color:#170e31;
+    margin-left:15px;
+    padding: 1%;
+    display: flex;
+    flex-wrap:wrap;
+    gap: 12px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scrollbar-color: #27175a #160e2d;
+}
+/* folders in right music section */
+.folder{
+    height: 210px;
+    width: 130px;
+    background-color: #27175a;
+    padding: 12px 10px 1px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    border:2px solid #302065;
+    cursor: pointer;
+}
+.folder img{
+    cursor: pointer;
+}
+.folder> :nth-child(3){
+    font-size: 15px;
+    cursor: pointer;
+}
+.folder > :nth-child(4){
+    font-size: 11px;
+    cursor: pointer;
+}
+.folder .circle{
+    width: 45px;
+    position: absolute;
+    right: 15px;
+    bottom: 49px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.folder:hover > .circle{
+    bottom: 100px;
+    opacity: 1;
+}
+.folder:hover{
+    background-color: #302065;
+    border:2px solid #8167cf;
+}
+
+
+/* song bar footer section */
+.songbar{
+    height: 9vh;
+    background-color: #191330;
+    width: 70vw;
+    position: absolute;
+    bottom:27px;
+    flex-direction: column;
+    gap: 11px;
+}
+.right{
+    right: 23px;
+}
+.extended{
+    width:95vw ;
+}
+.first{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.songInfo p{
+    color: white;
+    width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+}
+
+.songButtons{
+    gap: 18px;
+}
+.playImg , #previous-btn, #play-btn, #next-btn{
+    cursor: pointer;
+}
+.timeVol{
+    width: 200px;
+    color: white;
+    padding-right: 10px;
+    gap: 5px;
+}
+.timeVol img{
+    cursor: pointer;
+}
+.timeVol #volumeRange{
+    width: 80px;
+    accent-color: #7144FF;
+    cursor: pointer;
+}
+.seekbar{
+    width: 98%;
+    height: 5px;
+    background-color:#7144FF;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.seekPointer{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    left: 0%;
+    transition: left 0.5s ease-out;
+    cursor: pointer;
+}
+
+/* end when click home icon  */
+.happy{
+    background: url(photos/child.svg) no-repeat #170e31;
+    background-image: center;
+    background-position-x: center;
+    background-position-y: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.happy h1{
+    position: absolute;
+    top: 69vh;
+    color: #E5D4ED;
+    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+
+
+
+
+/* Responsive ---> */
+
+/* for pad or tablet */
+@media screen and (max-width: 1300px){
+    .right{
+        right: 43px;
+    }
+    .musicFolders {
+        height: 56vh;
+        max-height: 56vh;
+        width: 81vw;
+        gap: 27px;
+        display: flex;
+        justify-content: unset;
+        align-items: unset;
+        padding-left: 16px;
+    }
+    .folder {
+        height: 359px;
+        width: 264px;
+        margin-top: 12px;
+    }
+    .select {
+        width: 98px;
+        height: 26px;
+        font-size: 10px;
+    }
+    .signin-btn {
+        width: 56px;
+        height: 25px;
+        font-size: 9px;
+    }
+    .logo > :nth-child(2) {
+        font-size: 19px;
+    }
+    .logo>img {
+        width: 66px;
+    }
+    .emailGet {
+        position: absolute;
+        z-index: 110;
+        height: 67vh;
+        width: 73vw;
+        top: 0;
+    }
+}
+
+
+/* for iphone 12 or more */
+@media screen and (max-width: 700px){
+    .right {
+        right: 23px;
+    }
+    .welcomeText{
+        display: none;
+    }
+    .welcomeText> :nth-child(1){
+        display: none;
+    }
+    .welcomeChild{
+        display: none;
+    }
+    .welcomeImg2{
+        display: none;
+    }
+    .welcomeImg3{
+        display: none;
+    }
+    .welcomeImg1{
+        position: unset;
+    }
+    .img {
+        height: 100vh;
+        position: absolute;
+        width: 100vw;
+    }
+    .homepage nav{
+        height: 63px
+    }
+    .logo>img {
+        width: 49px;
+    }
+    .logo > :nth-child(2) {
+        font-size: 17px;
+        left: -7px;
+    }
+    
+    .navChild {
+        gap: 10px;
+        right: 15px;
+    }
+    .select {
+        width: 60px;
+        height: 21px;
+        font-size: 7px;
+    }
+    .signin-btn {
+        width: 46px;
+        height: 21px;
+        font-size: 8px;
+    }
+
+    .signin-btn:hover{
+        background-color:#3e1db8 ;
+        font-size: 8px;
+    }
+    .home-icon span lord-icon{
+        width: 26px;
+        height: 26px;
+    }
+    .extended {
+        width: 89vw;
+    }
+    .playlist {
+        position: absolute;
+        z-index: 100;
+        height: 64vh;
+        width: 87vw;
+        margin-top: 95px;
+    }
+    .myInformation {
+        margin-top: 10px;
+    }
+    .emailGet{
+        position: absolute;
+        z-index: 110;
+        height: 65vh;
+        width: 87vw;
+        top: 0;
+    }
+    .musicSection {
+        height: 66vh;
+        width: 89vw;
+        margin-top: 95px;
+    }
+    .backPlaylist-btn {
+        width: 25px;
+        margin: 7px 0 10px 10px;
+    }
+    .musicFolders {
+        height: 56vh;
+        max-height: 56vh;
+        width: 81vw;
+        gap: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin-left: 15px;
+    }
+    .folder {
+        height: 314px;
+        width: 226px;
+        margin-top: 10px;
+    }
+    .folder:hover > .circle{
+        bottom: 100px;
+        opacity: 1;
+    }
+    .songbar {
+        height: 149px;
+        gap: 19px;
+        width: 89vw;
+    }
+    .first {
+        flex-direction: column;
+        gap: 18px;
+        justify-content: center;
+    }
+    .songInfo p {
+        width: 150px;
+        padding-left: 31px;
+        font-size: 12px;
+    }
+    .songButtons{
+        gap: 14px;
+    }
+    .songbar img{
+        width: 27px;
+    }
+    .timeVol{
+        gap: 10px;
+        width: 150px;
+        padding-right: 5px;
+    }
+    .timeVol #volumeRange{
+        width: 50px;
+    }
+    .seekbar{
+        width: 95%;
+    }
+    .cross img{
+        width: 24px;
+    }
+    .playlist> :nth-child(1) div img {
+        width: 20px;
+    }
+    .playlist .mobile-cross-btn {
+        width: 20px;
+    }
+}
+/* for our mobiles  */
+@media screen and (max-width: 388px ){
+    .logo>img {
+        width: 42px;
+    }
+    .signin-btn {
+        width: 43px;
+        height: 20px;
+        font-size: 8px;
+    }
+    .select {
+        width: 58px;
+        height: 20px;
+        font-size: 7px;
+    }
+    .songbar {
+        height: 145px;
+        gap: 19px;
+        width: 89vw;
+        bottom: 10px;
+    }
+    .musicSection {
+        height: 62vh;
+        width: 89vw;
+        margin-top: 95px;
+    }
+    .musicFolders {
+        height: 48vh;
+        max-height: 48vh;
+        width: 81vw;
+        gap: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .folder {
+        height: 282px;
+        width: 186px;
+        margin-top: 10px;
+    }
+    .playlist {
+        position: absolute;
+        z-index: 100;
+        height: 57vh;
+        width: 87vw;
+        margin-top: 95px;
+    }
+    .playlist> :nth-child(1) div img {
+        width: 20px;
+    }
+    .playlist> :nth-child(1) div  h3{
+        font-size: 12px;
+    }
+    .playlist .mobile-cross-btn {
+        width: 20px;
+    }
+    .myInformation {
+        margin-top: 6px;
+    }
+    .songbar img {
+        width: 20px;
+    }
+    .first {
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+    }
+    .songbar {
+        height: 118px;
+        gap: 8px;
+        width: 89vw;
+        bottom: 10px;
+    }
+    .playlist {
+        position: absolute;
+        z-index: 100;
+        height: 62vh;
+        width: 87vw;
+        margin-top: 94px;
+    }
+    .musicName {
+        height: 81%;
+    }
+    .backPlaylist-btn {
+        width: 25px;
+        margin: 7px 0 10px 10px;
+    }
+    .emailGet {
+        position: absolute;
+        z-index: 110;
+        height: 62vh;
+        width: 88vw;
+        top: -4px;
+    }
+    .cross img{
+        width: 24px;
+    }
+}
