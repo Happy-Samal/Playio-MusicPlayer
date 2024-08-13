@@ -1,7 +1,6 @@
 console.log("js running");
 
-// const URL = "http://127.0.0.1:5500/musicPlayer";
-const URL = "https://playio-musicplayer.vercel.app";
+const URL = "https://playio-musicplayer.vercel.app/";
 
 let toggle = true;
 let songs;
@@ -130,7 +129,7 @@ logIn.addEventListener("click", (evt) => {
     let bol = checkInvalid();
     if (bol) {
         signIn.style.display = "none";
-        updateUser.children[0].src = "photos/userIcon.png";
+        updateUser.children[0].src = "/photos/userIcon.png";
         updateUser.children[1].classList.remove("display");
         updateUser.children[1].innerText = storeInformation.userName;
         updateUser.children[1].style.color = "white";
@@ -175,7 +174,7 @@ backPlaylistBtn.addEventListener("click", (evt) => {
           folderDiv.innerHTML=`<a href="${a.href}"></a><img src="/folder/${song}/folderImg.jpg" alt="coverimg">
     <p class="Name">${data.name}</p>
     <p class="Description">${data.description}</p>
-    <img class="circle" src="photos/circle-icon.png" alt="">`;
+    <img class="circle" src="/photos/circle-icon.png" alt="">`;
         musicFolders.append(folderDiv);
         folderDiv.addEventListener("click", (evt) => {
             musicName.innerHTML=""
@@ -213,15 +212,15 @@ function playMusic(track, div) {
         borderReset();
         currentSong.play();
         div.style.border = "2px solid #8167cf";
-        playImg.src = "photos/pause-icon.png";
+        playImg.src = "/photos/pause-icon.png";
         playImg.alt = "pause";
-        playBtn.src = "photos/pause-icon.png";
+        playBtn.src = "/photos/pause-icon.png";
     } else {
         currentSong.pause();
         div.style.border = "2px solid #332757";
-        playImg.src = "photos/play-icon.png";
+        playImg.src = "/photos/play-icon.png";
         playImg.alt = "play";
-        playBtn.src = "photos/play-icon.png";
+        playBtn.src = "/photos/play-icon.png";
     }
 
     songInfo.innerText = `Song Name - ${div.querySelector(".songPara").innerText}`;
@@ -237,18 +236,18 @@ function playMusic(track, div) {
 playBtn.addEventListener("click", (evt) => {
     if (currentSong.paused) {
         currentSong.play();
-        playBtn.src = "photos/pause-icon.png";
+        playBtn.src = "/photos/pause-icon.png";
         if (currentDiv) {
             currentDiv.style.border = "2px solid #8167cf";
-            currentDiv.querySelector(".playImg").src = "photos/pause-icon.png";
+            currentDiv.querySelector(".playImg").src = "/photos/pause-icon.png";
             currentDiv.querySelector(".playImg").alt = "pause";
         }
     } else {
         currentSong.pause();
-        playBtn.src = "photos/play-icon.png";
+        playBtn.src = "/photos/play-icon.png";
         if (currentDiv) {
             currentDiv.style.border = "2px solid #332757";
-            currentDiv.querySelector(".playImg").src = "photos/play-icon.png";
+            currentDiv.querySelector(".playImg").src = "/photos/play-icon.png";
             currentDiv.querySelector(".playImg").alt = "play";
         }
     }
@@ -258,19 +257,19 @@ let volumeImg=true;
 volumeRange.addEventListener("change",(evt)=>{
     currentSong.volume=evt.target.value/100;
     if(evt.target.value==0){
-        volumeIcon.src = "photos/mute-icon.png";
+        volumeIcon.src = "/photos/mute-icon.png";
     }else{
-        volumeIcon.src = "photos/volume-icon.png"
+        volumeIcon.src = "/photos/volume-icon.png"
     }
 })
 volumeIcon.addEventListener("click",(evt)=>{
     if(volumeImg){
         currentSong.volume=0;
-        volumeIcon.src = "photos/mute-icon.png";
+        volumeIcon.src = "/photos/mute-icon.png";
         volumeImg=false;
     }else{
         currentSong.volume=0.5;
-        volumeIcon.src = "photos/volume-icon.png";
+        volumeIcon.src = "/photos/volume-icon.png";
         volumeImg=true;
     }
 })
@@ -294,7 +293,7 @@ async function main(url) {
     for (const el of songs) {
         let div = document.createElement("div");
         div.classList.add("songNameDiv");
-        div.innerHTML = '<a href=""></a><img src="photos/music-icon.png";" alt="play"><p class="songPara">Happy - Samal</p><img class="playImg" src="photos/play-icon.png";" alt="play"><p>Play Now</p>';
+        div.innerHTML = '<a href=""></a><img src="/photos/music-icon.png";" alt="play"><p class="songPara">Happy - Samal</p><img class="playImg" src="/photos/play-icon.png";" alt="play"><p>Play Now</p>';
         div.querySelector("a").href = el.href;
         div.querySelector(".songPara").innerText = el.title;
         musicName.append(div);
@@ -362,7 +361,7 @@ let borderReset = () => {
     for (const div of divs) {
         div.style.border = "2px solid #332757";
         let playImg = div.querySelector(".playImg");
-        playImg.src = "photos/play-icon.png";
+        playImg.src = "/photos/play-icon.png";
         playImg.alt = "play";
     }
 };
