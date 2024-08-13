@@ -12,4 +12,4 @@ Palyio-MusicPlayer is a web application designed for listen songs. It allows use
 
 ## Website host on
 
-click - https://playio-musicplayer.vercel.app
+click - https://happysamal.freewebhostmost.com/

@@ -1,6 +1,6 @@
 console.log("js running");
 
-const URL = "https://playio-musicplayer.vercel.app/";
+const URL = "https://happysamal.freewebhostmost.com/";
 
 let toggle = true;
 let songs;
